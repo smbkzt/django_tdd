@@ -1,2 +1,4 @@
 *.pych
 first_tdd/__pycache__ lists/__pycache__
+lists/__pycache__
+functional_test/__pycache__
