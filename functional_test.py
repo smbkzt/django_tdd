@@ -1,5 +1,8 @@
 import unittest
+import time
 
+
+from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 
@@ -21,24 +24,25 @@ class NewVisitorTest(unittest.TestCase):
         self.assertIn('To Do List', self.browser.title)
 
         header_text = self.browser.find_element_by_tag_name('h1').text
-
         self.assertIn("To-Do", header_text)
 
         input_text = self.browser.find_element_by_id("input-text")
+        self.assertEqual(input_text.get_attribute("placeholder"),
+                         "Enter list element here")
+        input_text.send_keys("A new list")
+        input_text.send_keys(Keys.ENTER)
 
-        self.assertEqual(input_text.get_attribute("placeholder"), "Enter list element here")
+        time.sleep(1)
 
-        table = self.browser.find_element_by_id("table-list")
-
-        rows = table.find_elements_by_tag_name("tr")
-        self.assertTrue(
-                any(row == "1: Buy apples" for row in rows)
-            )
-
-
-        # She is invited to enter a to-do item straight away
+        self.check_for_row_in_list_table("1: A new list")
 
         self.fail("Finish the test!")
+
+    def check_for_row_in_list_table(self, row_text):
+        table = self.browser.find_element_by_id("table-list")
+        rows = table.find_elements_by_tag_name("tr")
+        self.assertIn(row_text, [row.text for row in rows])
+
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
