@@ -17,7 +17,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.browser.quit()
 
     def check_for_row_in_list_table(self, row_text):
-        table = self.browser.find_element_by_id("table-list")
+        table = self.browser.find_element_by_id("id_list_table")
         rows = table.find_elements_by_tag_name("tr")
         self.assertIn(row_text, [row.text for row in rows])
 
@@ -63,3 +63,13 @@ class NewVisitorTest(LiveServerTestCase):
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertIn('A list after new session', page_text)
         self.assertNotIn('A new list', page_text)
+
+    def test_styling_and_layout(self):
+        self.browser.get(self.live_server_url)
+        self.browser.set_window_size(1024, 768)
+
+        input_box = self.browser.find_element_by_id("input_text")
+        self.assertAlmostEqual(
+            input_box.location['x'] + input_box.size['width'] / 2,
+            512, delta=5
+        )
