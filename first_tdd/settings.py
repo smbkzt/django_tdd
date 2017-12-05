@@ -24,14 +24,17 @@ SECRET_KEY = '&$)67mt2lvas$wf$*_7y7s+t8ne#hy3@4h*kbc#(d(lfd8=c83'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, ('../static')))
+
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
