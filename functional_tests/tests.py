@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 import time
 
 
@@ -31,16 +32,16 @@ class NewVisitorTest(LiveServerTestCase):
         header_text = self.browser.find_element_by_tag_name('h1').text
         self.assertIn("To-Do", header_text)
 
-        input_text = self.browser.find_element_by_id("input-text")
+        input_text = self.browser.find_element_by_id("input_text")
         self.assertEqual(input_text.get_attribute("placeholder"),
-                         "Enter list element here")
+                         "Enter a to-do item")
         input_text.send_keys("A new list")
         input_text.send_keys(Keys.ENTER)
-        time.sleep(1)
+        time.sleep(0.5)
 
         current_usr_one_url = self.browser.current_url
         self.assertRegex(current_usr_one_url, '/lists/.+')
-        self.check_for_row_in_list_table("A new list")
+        self.check_for_row_in_list_table("1: A new list")
 
         # We want to check whether the another user dont
         # see the prev user's data (sessions)
@@ -50,14 +51,15 @@ class NewVisitorTest(LiveServerTestCase):
         body = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn("1: A new list", body)
 
-        input_box = self.browser.find_element_by_id("input-text")
+        input_box = self.browser.find_element_by_id("input_text")
         input_box.send_keys("A list after new session")
         input_box.send_keys(Keys.ENTER)
+        time.sleep(0.5)
 
         current_usr_two_url = self.browser.current_url
         self.assertRegex(current_usr_two_url, '/lists/.+')
         self.assertNotEqual(current_usr_two_url, current_usr_one_url)
 
         page_text = self.browser.find_element_by_tag_name('body').text
-        self.assertNotIn('A list after new session', page_text)
-        self.assertIn('A new list', page_text)
+        self.assertIn('A list after new session', page_text)
+        self.assertNotIn('A new list', page_text)

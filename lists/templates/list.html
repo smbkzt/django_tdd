@@ -5,16 +5,14 @@
 </head>
 <body>
     <h1>To-Do</h1>
-    <form action="/lists/new/" method="POST">
+    <form action="/lists/{{list.id}}/add_item" method="POST">
         {% csrf_token %}
-        <input type="text" name="item_text" id="input-text" placeholder="Enter list element here">
+        <input type="text" name="item_text" id="input_text" placeholder="Enter list element here">
     </form>
-    {%if all_items%}
-        <table id="table-list">
-            {%for item in all_items %}
-                <tr><td>{{forloop.counter}}: {{item.text}}</td></tr>
-            {%endfor%}
-        </table>
-    {%endif%}
+    <table id="table-list">
+        {%for item in list.items_set.all %}
+            <tr><td>{{forloop.counter}}: {{item.text}}</td></tr>
+        {%endfor%}
+    </table>
 </body>
 </html>
