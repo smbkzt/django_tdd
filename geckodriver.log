@@ -1175,3 +1175,230 @@ dispatch/</<@chrome://marionette/content/listener.js:532:40
 [Child 8222, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 [Child 8222, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 [Child 8222, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512426002386	geckodriver	INFO	geckodriver 0.19.1
+1512426002390	geckodriver	INFO	Listening on 127.0.0.1:37265
+1512426003484	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Z9hE9Vhj8r3i"
+1512426003840	Marionette	INFO	Enabled via --marionette
+1512426004683	Marionette	INFO	Listening on port 40953
+1512426004699	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512426004745	Marionette	DEBUG	Register listener.js for window 2147483649
+1512426004774	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512426004806	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512426004806	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512426004811	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:44043/"
+1512426004825	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:44043/"
+[Child 2955, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 2955, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 2955, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512426024721	geckodriver	INFO	geckodriver 0.19.1
+1512426024724	geckodriver	INFO	Listening on 127.0.0.1:33947
+1512426025814	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.xabUI6wQUrSK"
+1512426026143	Marionette	INFO	Enabled via --marionette
+1512426026970	Marionette	INFO	Listening on port 38075
+1512426027020	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512426027078	Marionette	DEBUG	Register listener.js for window 2147483649
+1512426027125	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512426027149	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512426027149	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512426027153	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:37359/"
+1512426027162	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:37359/"
+[Child 3151, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 3151, Chrome_ChildThread] WARNING: pipe error (21): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 3151, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512426589340	geckodriver	INFO	geckodriver 0.19.1
+1512426589343	geckodriver	INFO	Listening on 127.0.0.1:60531
+1512426590429	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.qzT4psId335d"
+1512426590765	Marionette	INFO	Enabled via --marionette
+1512426591586	Marionette	INFO	Listening on port 40955
+1512426591641	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512426591688	Marionette	DEBUG	Register listener.js for window 2147483649
+1512426591723	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512426591759	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512426591759	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512426591764	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:48487/"
+1512426591774	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:48487/"
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 556: TypeError: this.tablesData[table] is undefined
+[Child 4168, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 4168, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512426624393	geckodriver	INFO	geckodriver 0.19.1
+1512426624396	geckodriver	INFO	Listening on 127.0.0.1:42405
+1512426625482	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.PPmPD7Gw8Uou"
+1512426625817	Marionette	INFO	Enabled via --marionette
+1512426626634	Marionette	INFO	Listening on port 44783
+1512426626693	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512426626740	Marionette	DEBUG	Register listener.js for window 2147483649
+1512426626768	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512426626791	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512426626791	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512426626796	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:48719/"
+1512426626805	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:48719/"
+[Child 4372, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 4372, Chrome_ChildThread] WARNING: pipe error (19): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 4372, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512427052769	geckodriver	INFO	geckodriver 0.19.1
+1512427052772	geckodriver	INFO	Listening on 127.0.0.1:33093
+1512427053856	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.uJhZrBd9YuXh"
+1512427054188	Marionette	INFO	Enabled via --marionette
+1512427055063	Marionette	INFO	Listening on port 33151
+1512427055169	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512427055221	Marionette	DEBUG	Register listener.js for window 2147483649
+1512427055238	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512427055257	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512427055258	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512427055263	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:52561/"
+1512427055275	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:52561/"
+[Child 4754, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 4754, Chrome_ChildThread] WARNING: pipe error (21): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 4754, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512427326427	geckodriver	INFO	geckodriver 0.19.1
+1512427326429	geckodriver	INFO	Listening on 127.0.0.1:48159
+1512427327516	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.algprB4qK3Bs"
+1512427327850	Marionette	INFO	Enabled via --marionette
+1512427328724	Marionette	INFO	Listening on port 35013
+1512427328822	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512427328869	Marionette	DEBUG	Register listener.js for window 2147483649
+1512427328889	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512427328909	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512427328909	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512427328913	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:54853/"
+1512427328922	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:54853/"
+[Child 5208, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 5208, Chrome_ChildThread] WARNING: pipe error (21): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 5208, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512427347588	geckodriver	INFO	geckodriver 0.19.1
+1512427347590	geckodriver	INFO	Listening on 127.0.0.1:52105
+1512427348680	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.JeZzSLQBTYw9"
+1512427349021	Marionette	INFO	Enabled via --marionette
+1512427349841	Marionette	INFO	Listening on port 33431
+1512427349896	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512427349944	Marionette	DEBUG	Register listener.js for window 2147483649
+1512427349976	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512427350009	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512427350009	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512427350013	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:48223/"
+1512427350023	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:48223/"
+[Child 5378, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 5378, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 5378, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512429852220	geckodriver	INFO	geckodriver 0.19.1
+1512429852222	geckodriver	INFO	Listening on 127.0.0.1:50269
+1512429853313	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.pizfSL2mZyll"
+1512429853655	Marionette	INFO	Enabled via --marionette
+1512429854481	Marionette	INFO	Listening on port 43137
+1512429854533	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512429854582	Marionette	DEBUG	Register listener.js for window 2147483649
+1512429854623	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512429854650	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512429854650	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512429854653	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:40987/"
+1512429854657	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:40987/"
+1512429854708	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 123"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:123 < onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:138 < _middleware/</<()@resource://activity-stream/lib/Store.jsm:52 < Store/this[method]()@resource://activity-stream/lib/Store.jsm:31 < uninit()@resource://activity-stream/lib/Store.jsm:151 < uninit()@resource://activity-stream/lib/ActivityStream.jsm:266 < uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:80 < shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:196 < callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4509 < observe()@resource://gre/modules/addons/XPIProvider.jsm:2281 < GeckoDriver.prototype.quit()@driver.js:3307 < despatch()@server.js:553 < execute()@server.js:527 < onPacket/<()@server.js:502 < onPacket()@server.js:501 < _onJSONObjectReady/<()@transport.js:501
+[Child 8207, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 8207, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 8207, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512429879410	geckodriver	INFO	geckodriver 0.19.1
+1512429879412	geckodriver	INFO	Listening on 127.0.0.1:33493
+1512429880499	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.j7yWs5udcCGk"
+1512429880835	Marionette	INFO	Enabled via --marionette
+1512429881742	Marionette	INFO	Listening on port 43011
+1512429881812	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512429881861	Marionette	DEBUG	Register listener.js for window 2147483649
+1512429881895	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512429881909	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512429881909	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512429881913	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:39773/"
+1512429881923	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:39773/"
+[Child 8398, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 8398, Chrome_ChildThread] WARNING: pipe error (21): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 8398, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512429954733	geckodriver	INFO	geckodriver 0.19.1
+1512429954736	geckodriver	INFO	Listening on 127.0.0.1:45837
+1512429955821	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.gCfZFQtZcw8e"
+1512429956163	Marionette	INFO	Enabled via --marionette
+1512429956997	Marionette	INFO	Listening on port 41873
+1512429957043	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512429957091	Marionette	DEBUG	Register listener.js for window 2147483649
+1512429957115	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512429957137	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512429957137	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512429957141	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:59739/"
+1512429957151	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:59739/"
+[Child 8586, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 8586, Chrome_ChildThread] WARNING: pipe error (21): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 8586, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512430106284	geckodriver	INFO	geckodriver 0.19.1
+1512430106287	geckodriver	INFO	Listening on 127.0.0.1:41719
+1512430107374	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.6fSrC3BD4REv"
+1512430107707	Marionette	INFO	Enabled via --marionette
+1512430108573	Marionette	INFO	Listening on port 39201
+1512430108581	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512430108632	Marionette	DEBUG	Register listener.js for window 2147483649
+1512430108653	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512430108679	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512430108680	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512430108684	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:58249/"
+1512430108694	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:58249/"
+[Child 8797, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 8797, Chrome_ChildThread] WARNING: pipe error (21): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 8797, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512430272167	geckodriver	INFO	geckodriver 0.19.1
+1512430272170	geckodriver	INFO	Listening on 127.0.0.1:54285
+1512430273259	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.PhX2h1pQxOzf"
+1512430273591	Marionette	INFO	Enabled via --marionette
+1512430274426	Marionette	INFO	Listening on port 39903
+1512430274468	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512430274515	Marionette	DEBUG	Register listener.js for window 2147483649
+1512430274535	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512430274547	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512430274547	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512430274551	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:42387/"
+1512430274560	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:42387/"
+[Child 9023, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 9023, Chrome_ChildThread] WARNING: pipe error (21): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 9023, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512430445021	geckodriver	INFO	geckodriver 0.19.1
+1512430445023	geckodriver	INFO	Listening on 127.0.0.1:38993
+1512430446111	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.jM0wk9fR3ijc"
+1512430446435	Marionette	INFO	Enabled via --marionette
+1512430447254	Marionette	INFO	Listening on port 40243
+1512430447322	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512430447369	Marionette	DEBUG	Register listener.js for window 2147483649
+1512430447399	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512430447411	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512430447412	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512430447424	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:55421/"
+1512430447425	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:55421/"
+[Child 9292, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 9292, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 9292, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512433925517	geckodriver	INFO	geckodriver 0.19.1
+1512433925520	geckodriver	INFO	Listening on 127.0.0.1:40249
+1512433926610	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.nITbLoL3oG0H"
+1512433926951	Marionette	INFO	Enabled via --marionette
+1512433927789	Marionette	INFO	Listening on port 39243
+1512433927843	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512433927892	Marionette	DEBUG	Register listener.js for window 2147483649
+1512433927926	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512433927958	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512433927958	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512433927962	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:37453/"
+1512433927972	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:37453/"
+[Child 12670, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 12670, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 12670, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1512433948879	geckodriver	INFO	geckodriver 0.19.1
+1512433948882	geckodriver	INFO	Listening on 127.0.0.1:39805
+1512433949970	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.CiY098Bvvh6j"
+1512433950305	Marionette	INFO	Enabled via --marionette
+1512433951201	Marionette	INFO	Listening on port 37991
+1512433951280	Marionette	WARN	TLS certificate errors will be ignored for this session
+1512433951328	Marionette	DEBUG	Register listener.js for window 2147483649
+1512433951353	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1512433951364	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1512433951364	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1512433951370	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost:36939/"
+1512433951379	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost:36939/"
+[Child 12839, Chrome_ChildThread] WARNING: pipe error (35): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 12839, Chrome_ChildThread] WARNING: pipe error (19): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 12839, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-bfYN6l/firefox-57.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353

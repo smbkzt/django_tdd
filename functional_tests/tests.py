@@ -1,12 +1,12 @@
-import unittest
 import time
 
 
+from django.test import LiveServerTestCase
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 
-class NewVisitorTest(unittest.TestCase):
+class NewVisitorTest(LiveServerTestCase):
 
     def setUp(self):
         self.browser = webdriver.Firefox()
@@ -14,6 +14,11 @@ class NewVisitorTest(unittest.TestCase):
 
     def tearDown(self):
         self.browser.quit()
+
+    def check_for_row_in_list_table(self, row_text):
+        table = self.browser.find_element_by_id("table-list")
+        rows = table.find_elements_by_tag_name("tr")
+        self.assertIn(row_text, [row.text for row in rows])
 
     def test_can_start_a_list_and_retrieve_it_later(self):
         # Edith has heard about a cool new online to-do app. She goes
@@ -31,12 +36,28 @@ class NewVisitorTest(unittest.TestCase):
                          "Enter list element here")
         input_text.send_keys("A new list")
         input_text.send_keys(Keys.ENTER)
-
         time.sleep(1)
 
-        self.check_for_row_in_list_table("1: A new list")
+        current_usr_one_url = self.browser.current_url
+        self.assertRegex(current_usr_one_url, '/lists/.+')
+        self.check_for_row_in_list_table("A new list")
 
-    def check_for_row_in_list_table(self, row_text):
-        table = self.browser.find_element_by_id("table-list")
-        rows = table.find_elements_by_tag_name("tr")
-        self.assertIn(row_text, [row.text for row in rows])
+        # We want to check whether the another user dont
+        # see the prev user's data (sessions)
+        self.browser.quit()
+        self.browser = webdriver.Firefox()
+        self.browser.get(self.live_server_url)
+        body = self.browser.find_element_by_tag_name('body').text
+        self.assertNotIn("1: A new list", body)
+
+        input_box = self.browser.find_element_by_id("input-text")
+        input_box.send_keys("A list after new session")
+        input_box.send_keys(Keys.ENTER)
+
+        current_usr_two_url = self.browser.current_url
+        self.assertRegex(current_usr_two_url, '/lists/.+')
+        self.assertNotEqual(current_usr_two_url, current_usr_one_url)
+
+        page_text = self.browser.find_element_by_tag_name('body').text
+        self.assertNotIn('A list after new session', page_text)
+        self.assertIn('A new list', page_text)

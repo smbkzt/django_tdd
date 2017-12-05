@@ -15,56 +15,9 @@ class HomePageTest(TestCase):
         found = resolve('/')
         self.assertEqual(found.func, home_page)
 
-    def test_home_page_return_correct_html(self):
-        request = HttpRequest()
-        response = home_page(request)
-        expected_html = render_to_string("home.html", request=request)
-
-        # The same problem with tokens
-        # self.assertEqual(response.content.decode(), expected_html)
-
-    def test_home_page_can_save_a_post_requests(self):
-        request = HttpRequest()
-        request.method == 'POST'
-        request.POST['item_text'] = "A new list item"
-
-        response = home_page(request)
-        new_resp = home_page(HttpRequest())
-        # Cuz the home page redirects to '/'
-
-        new_item_text = Items.objects.first().text
-
-        self.assertEqual(Items.objects.all().count(), 1)
-        self.assertEqual(new_item_text, "A new list item")
-
-        self.assertIn("A new list item", new_resp.content.decode())
-
-        expected_html = render_to_string(
-            'home.html',
-            {"all_items": Items.objects.all()},
-            request=request
-        )
-
-        # Tokens are not equal
-        # self.assertEqual(response.content.decode(), expected_html)
-
-        self.assertEqual(response.status_code, 302)
-        self.assertEqual(response['location'], '/')
-
-    def test_page_saves_object_when_its_necessary(self):
-        request = HttpRequest()
-        home_page(request)
-        self.assertEqual(Items.objects.count(), 0)
-
-    def test_page_displays_all_the_list(self):
-        Items.objects.create(text="Item1")
-        Items.objects.create(text="Item2")
-
-        request = HttpRequest()
-        response = home_page(request)
-
-        self.assertIn("Item1", response.content.decode())
-        self.assertIn("Item2", response.content.decode())
+    def test_home_page_uses_home_template(self):
+        response = self.client.get('/')
+        self.assertTemplateUsed(response, 'home.html')
 
 
 class ItemModelTest(TestCase):
@@ -83,3 +36,39 @@ class ItemModelTest(TestCase):
 
         self.assertEqual(first_item, saved_items[0])
         self.assertEqual(second_item, saved_items[1])
+
+
+class ListViewTest(TestCase):
+
+    def test_uses_list_template(self):
+        response = self.client.get('/lists/the-only-list-in-the-world/')
+        self.assertTemplateUsed(response, 'list.html')
+
+    def test_displays_all_items(self):
+        Items.objects.create(text="Itemss1")
+        Items.objects.create(text="Itemss2")
+
+        response = self.client.get('/lists/the-only-list-in-the-world/')
+
+        self.assertContains(response, 'Itemss1')
+        self.assertContains(response, 'Itemss2')
+
+
+class NewListTest(TestCase):
+
+    def test_home_page_can_save_a_post_requests(self):
+        self.client.post(
+            '/list/new/',
+            data={"item_text": "A new list"}
+        )
+
+        # self.assertEqual(Items.objects.all().count(), 1)
+        # first_item = Items.objects.first().text
+        # self.assertEqual(first_item, "A new list")
+
+    def test_redirects_after_post_request(self):
+        response = self.client.post(
+            '/lists/new/',
+            data={'item_text': 'A new list item'}
+        )
+        self.assertRedirects(response, '/lists/the-only-list-in-the-world/')
