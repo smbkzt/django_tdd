@@ -1,10 +1,5 @@
-import time
-
 from django.test import LiveServerTestCase
-from django.template.loader import render_to_string
 from django.urls import resolve
-from django.test import TestCase
-from django.http import HttpRequest
 
 from lists.views import home_page
 from .models import Items, Lists
@@ -77,7 +72,6 @@ class ListViewTest(LiveServerTestCase):
 class NewListTest(LiveServerTestCase):
 
     def test_passes_correct_list_to_the_template(self):
-        fake_list = Lists.objects.create()
         correct_list = Lists.objects.create()
         response = self.client.get('/lists/%d/' % (correct_list.id,))
         self.assertEqual(response.context["list"], correct_list)

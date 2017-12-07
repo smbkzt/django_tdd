@@ -1,4 +1,5 @@
 #! /usr/bin/env python3
+import sys
 import time
 
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
@@ -7,6 +8,20 @@ from selenium import webdriver
 
 
 class NewVisitorTest(StaticLiveServerTestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        for argv in sys.argv:
+            if 'liveserver' in argv:
+                cls.server_url = "http" + argv.spplit("=")[-1]
+                return
+        super().setUpClass()
+        cls.server_url = cls.live_server_url
+
+    @classmethod
+    def tearDownClass(cls):
+        if cls.server_url == cls.live_server_url:
+            super().tearDownClass()
 
     def setUp(self):
         self.browser = webdriver.Firefox()
@@ -23,7 +38,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
     def test_can_start_a_list_and_retrieve_it_later(self):
         # Edith has heard about a cool new online to-do app. She goes
         # to check out its homepage
-        self.browser.get(self.live_server_url)
+        self.browser.get(self.server_url)
 
         # She notices the page title and header mention to-do lists
         self.assertIn('To Do List', self.browser.title)
@@ -46,7 +61,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
         # see the prev user's data (sessions)
         self.browser.quit()
         self.browser = webdriver.Firefox()
-        self.browser.get(self.live_server_url)
+        self.browser.get(self.server_url)
         body = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn("1: A new list", body)
 
@@ -64,7 +79,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
         self.assertNotIn('A new list', page_text)
 
     def test_styling_and_layout(self):
-        self.browser.get(self.live_server_url)
+        self.browser.get(self.server_url)
         self.browser.set_window_size(1024, 768)
 
         input_box = self.browser.find_element_by_id("input_text")
