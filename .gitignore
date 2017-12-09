@@ -6,3 +6,4 @@ functional_test/__pycache__
 */__pycache__/
 db.sqlite3
 settings.ini
+myprojectenv
