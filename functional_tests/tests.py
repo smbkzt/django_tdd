@@ -66,7 +66,6 @@ class NewVisitorTest(StaticLiveServerTestCase):
         self.assertIn('A list after new session', page_text)
         self.assertNotIn('A new list', page_text)
 
-
     def test_styling_and_layout(self):
         self.browser.get(self.live_server_url)
         self.browser.set_window_size(1024, 768)
