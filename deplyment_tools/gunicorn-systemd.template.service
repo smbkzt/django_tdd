@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=USERNAME
 Group=www-data
-WorkingDirectory=/home/USERNAME/MYPROJECT
-ExecStart=/home/USERNAME/MYPROJECT/MYENVIROMENT/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/USERNAME/MYPROJECT/MYPROJECT.sock MYWSGIFOLDER.wsgi:application
+WorkingDirectory=/home/USERNAME/sites/MYPROJECT
+ExecStart=/home/USERNAME/sites/MYPROJECT/MYENVIROMENT/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/USERNAME/sites/MYPROJECT/MYPROJECT.sock MYWSGIFOLDER.wsgi:application
 
 [Install]
 WantedBy=multi-user.target

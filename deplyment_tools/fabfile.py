@@ -7,7 +7,7 @@ REPO_URL = 'https://github.com/smbkzt/smbkzt.tk.git'
 
 def deploy():
 
-    site_folder = '/home/smbkzt/sites/{0}'.format(env.host)
+    site_folder = '/home/root/sites/{0}'.format(env.host)
     run('mkdir -p {0}'.format(site_folder))
     with cd(site_folder):
         _get_latest_source()
@@ -29,31 +29,26 @@ def _get_latest_source():
 
 
 def _update_nginx_files(hostname):
-    settings_path = 'deplyment_tools/nginx.template.conf'
-    sed(settings_path, "USERNAME", "smbkzt")
-    sed(settings_path, "MYPROJECT", hostname)
-    sed(settings_path, "SERVER_DOMAIN", hostname)
+    nginx_path = 'deplyment_tools/nginx.template.conf'
+    sed(nginx_path, "USERNAME", "root")
+    sed(nginx_path, "MYPROJECT", hostname)
+    sed(nginx_path, "SERVER_DOMAIN", hostname)
 
     run(
-        "sudo cp deplyment_tools/nginx.template.conf /etc/nginx/sites-available/{0}}"
+        "sudo cp deplyment_tools/nginx.template.conf /etc/nginx/sites-available/{0}"
         .format(hostname)
         )
-    run("sudo ln -s /etc/nginx/sites-available/{0} /etc/nginx/sites-enabled".format(hostname))
-    run("sudo nginx -t")
-    run("sudo systemctl restart nginx")
 
 
 def _update_gunicorn_files(hostname):
     MYENVIROMENT = "tddenv"
     settings_path = 'deplyment_tools/gunicorn-systemd.template.service'
-    sed(settings_path, "USERNAME", "smbkzt")
+    sed(settings_path, "USERNAME", "root")
     sed(settings_path, "MYPROJECT", hostname)
     sed(settings_path, "MYENVIROMENT", MYENVIROMENT)
     sed(settings_path, "MYWSGIFOLDER", "first_tdd")
 
-    run("sudo cp deplyment_tools/nginx.template.conf /etc/systemd/system/gunicorn.service")
-    run("sudo systemctl start gunicorn")
-    run("sudo systemctl enable gunicorn")
+    run("sudo cp deplyment_tools/gunicorn-systemd.template.service /etc/systemd/system/gunicorn.service")
 
 
 def _update_settings(site_name):
