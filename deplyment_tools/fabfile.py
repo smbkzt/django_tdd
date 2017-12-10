@@ -12,9 +12,9 @@ def deploy():
     with cd(site_folder):
         _get_latest_source()
         _update_settings(env.host)
-        _update_virtualenv()
-        _update_static_files()
-        _update_database()
+        # _update_virtualenv()
+        # _update_static_files()
+        # _update_database()
 
 
 def _get_latest_source():
@@ -43,15 +43,15 @@ def _update_settings(site_name):
     append(settings_path, '\nfrom .secret_key import SECRET_KEY')
 
 
-def _update_virtualenv():
-    if not exists('tddenv/bin/pip'):
-        run('python -m venv tddenv')
-    run('./tddenv/bin/pip install -r requirements.txt')
+# def _update_virtualenv():
+#     if not exists('tddenv/bin/pip'):
+#         run('python3 -m venv tddenv')
+#     run('/tddenv/bin/pip install -r requirements.txt')
 
 
-def _update_static_files():
-    run('/tddenv/bin/python manage.py collectstatic --noinput')
+# def _update_static_files():
+#     run('/tddenv/bin/python manage.py collectstatic --noinput')
 
 
-def _update_database():
-    run('/tddenv/bin/python manage.py migrate --noinput')
+# def _update_database():
+#     run('/tddenv/bin/python manage.py migrate --noinput')
