@@ -26,6 +26,15 @@ def _get_latest_source():
     run('git reset --hard {0}'.format(current_commit))
 
 
+def _update_gunicorn_files(hostname):
+    MYENVIROMENT = "tddenv"
+    settings_path = 'deplyment_tools/gunicorn-systemd.template.service'
+    sed(settings_path, "USERNAME", "smbkzt")
+    sed(settings_path, "MYPROJECT", hostname)
+    sed(settings_path, "MYENVIROMENT", MYENVIROMENT)
+    sed(settings_path, "MYWSGIFOLDER", "first_tdd")
+
+
 def _update_settings(site_name):
     settings_path = 'first_tdd/settings.py'
     sed(settings_path, "DEBUG = True", "DEBUG = False")

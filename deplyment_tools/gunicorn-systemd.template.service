@@ -1,13 +1,12 @@
 [Unit]
-Description=Gunicorn server for SITENAME
+Description=gunicorn daemon
+After=network.target
 
 [Service]
-Restart=on-failure
-User=elspeth
-WorkingDirectory=/home/elspeth/sites/SITENAME/source
-ExecStart=/home/elspeth/sites/SITENAME/virtualenv/bin/gunicorn \
-    --bind unix:/tmp/SITENAME.socket \
-    superlists.wsgi:application
+User=USERNAME
+Group=www-data
+WorkingDirectory=/home/USERNAME/MYPROJECT
+ExecStart=/home/USERNAME/MYPROJECT/MYENVIROMENT/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/USERNAME/MYPROJECT/MYPROJECT.sock MYWSGIFOLDER.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
