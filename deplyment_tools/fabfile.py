@@ -12,6 +12,7 @@ def deploy():
     with cd(site_folder):
         _get_latest_source()
         _update_settings(env.host)
+        _update_virtualenv()
         _update_static_files()
         _update_database()
 
@@ -44,13 +45,13 @@ def _update_settings(site_name):
 
 def _update_virtualenv():
     if not exists('tddenv/bin/pip'):
-        run('python3 -m venv tddenv')
+        run('python -m venv tddenv')
     run('./tddenv/bin/pip install -r requirements.txt')
 
 
 def _update_static_files():
-    run('./tddenv/bin/python3 manage.py collectstatic --noinput')
+    run('/tddenv/bin/python manage.py collectstatic --noinput')
 
 
 def _update_database():
-    run('./tddenv/bin/python3 manage.py migrate --noinput')
+    run('/tddenv/bin/python manage.py migrate --noinput')
