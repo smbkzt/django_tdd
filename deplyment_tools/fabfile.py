@@ -12,6 +12,8 @@ def deploy():
     with cd(site_folder):
         _get_latest_source()
         _update_settings(env.host)
+        _update_gunicorn_files(env.host)
+        _update_nginx_files(env.host)
         # _update_virtualenv()
         # _update_static_files()
         # _update_database()
@@ -26,6 +28,21 @@ def _get_latest_source():
     run('git reset --hard {0}'.format(current_commit))
 
 
+def _update_nginx_files(hostname):
+    settings_path = 'deplyment_tools/nginx.template.conf'
+    sed(settings_path, "USERNAME", "smbkzt")
+    sed(settings_path, "MYPROJECT", hostname)
+    sed(settings_path, "SERVER_DOMAIN", hostname)
+
+    run(
+        "sudo cp deplyment_tools/nginx.template.conf /etc/nginx/sites-available/{0}}"
+        .format(hostname)
+        )
+    run("sudo ln -s /etc/nginx/sites-available/{0} /etc/nginx/sites-enabled".format(hostname))
+    run("sudo nginx -t")
+    run("sudo systemctl restart nginx")
+
+
 def _update_gunicorn_files(hostname):
     MYENVIROMENT = "tddenv"
     settings_path = 'deplyment_tools/gunicorn-systemd.template.service'
@@ -33,6 +50,10 @@ def _update_gunicorn_files(hostname):
     sed(settings_path, "MYPROJECT", hostname)
     sed(settings_path, "MYENVIROMENT", MYENVIROMENT)
     sed(settings_path, "MYWSGIFOLDER", "first_tdd")
+
+    run("sudo cp deplyment_tools/nginx.template.conf /etc/systemd/system/gunicorn.service")
+    run("sudo systemctl start gunicorn")
+    run("sudo systemctl enable gunicorn")
 
 
 def _update_settings(site_name):
