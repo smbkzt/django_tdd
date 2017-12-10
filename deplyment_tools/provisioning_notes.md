@@ -1,3 +1,26 @@
+First add a sudo user
+========================
+
+useradd -m -s /bin/bash smbkzt
+usermod -a -G sudo smbkzt
+passwd smbkzt
+su - smbkzt
+
+
+Install packages
+====================
+sudo apt-get update
+sudo apt-get install python3-pip python3-dev libpq-dev nginx
+
+sudo -H pip3 install --upgrade pip
+sudo -H pip3 install virtualenv
+
+
+Create a folder to project
+==========================
+mkdir bla bla bla
+
+
 Provisioning a new site
 =======================
 

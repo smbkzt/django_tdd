@@ -7,13 +7,13 @@ REPO_URL = 'https://github.com/smbkzt/smbkzt.tk.git'
 
 def deploy():
 
-    site_folder = '/home/root/sites/{0}'.format(env.host)
+    site_folder = '/home/{0}/sites/{1}'.format(env.user, env.host)
     run('mkdir -p {0}'.format(site_folder))
     with cd(site_folder):
         _get_latest_source()
         _update_settings(env.host)
-        _update_gunicorn_files(env.host)
-        _update_nginx_files(env.host)
+        _update_gunicorn_files(env.user, env.host)
+        _update_nginx_files(env.user, env.host)
         # _update_virtualenv()
         # _update_static_files()
         # _update_database()
@@ -28,9 +28,9 @@ def _get_latest_source():
     run('git reset --hard {0}'.format(current_commit))
 
 
-def _update_nginx_files(hostname):
+def _update_nginx_files(user, hostname):
     nginx_path = 'deplyment_tools/nginx.template.conf'
-    sed(nginx_path, "USERNAME", "root")
+    sed(nginx_path, "USERNAME", user)
     sed(nginx_path, "MYPROJECT", hostname)
     sed(nginx_path, "SERVER_DOMAIN", hostname)
 
@@ -40,10 +40,10 @@ def _update_nginx_files(hostname):
         )
 
 
-def _update_gunicorn_files(hostname):
+def _update_gunicorn_files(user, hostname):
     MYENVIROMENT = "tddenv"
     settings_path = 'deplyment_tools/gunicorn-systemd.template.service'
-    sed(settings_path, "USERNAME", "root")
+    sed(settings_path, "USERNAME", user)
     sed(settings_path, "MYPROJECT", hostname)
     sed(settings_path, "MYENVIROMENT", MYENVIROMENT)
     sed(settings_path, "MYWSGIFOLDER", "first_tdd")
