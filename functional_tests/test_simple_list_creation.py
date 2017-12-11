@@ -24,10 +24,11 @@ class NewVisitorTest(FunctionalTest):
                          "Enter a to-do item")
         input_text.send_keys("A new list")
         input_text.send_keys(Keys.ENTER)
-        time.sleep(0.5)
+        time.sleep(0.2)
 
         current_usr_one_url = self.browser.current_url
         self.assertRegex(current_usr_one_url, '/lists/.+')
+        time.sleep(0.2)
         self.check_for_row_in_list_table("1: A new list")
 
         # We want to check whether the another user dont
@@ -41,7 +42,7 @@ class NewVisitorTest(FunctionalTest):
         input_box = self.browser.find_element_by_id("input_text")
         input_box.send_keys("A list after new session")
         input_box.send_keys(Keys.ENTER)
-        time.sleep(0.5)
+        time.sleep(0.2)
 
         current_usr_two_url = self.browser.current_url
         self.assertRegex(current_usr_two_url, '/lists/.+')

@@ -1,4 +1,7 @@
 #input_text {
-
     margin-top: 2ex;
+}
+
+.has-error{
+    margin-top: 20px;
 }
