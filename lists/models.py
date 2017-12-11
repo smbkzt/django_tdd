@@ -6,5 +6,5 @@ class Lists(models.Model):
 
 
 class Items(models.Model):
-    text = models.TextField(default="")
+    text = models.TextField(blank=False)
     list = models.ForeignKey(Lists, on_delete="CASCADE")

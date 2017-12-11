@@ -16,6 +16,12 @@
                 <form method="POST" action="{%block form_action %}{%endblock%}">
                     <input name="item_text" id="input_text" placeholder="Enter a to-do item" class="form-control input-lg" />
                     {% csrf_token %}
+                    {%if error%}
+                        div.form-<group class="has-error">
+                            <span class="help-block">{{error}}</span>
+                        </group>
+                    {%endif%}
+
                 </form>
                 </div>
             </div>
